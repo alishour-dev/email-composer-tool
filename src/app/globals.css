@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply h-screen w-screen overflow-hidden bg-gradient-to-br from-indigo-200 to-orange-300 text-gray-600;
+	}
+}
+
+@layer components {
+	.glass {
+		@apply bg-white bg-opacity-50 shadow-md ring-1 ring-gray-200 backdrop-blur-[0.5rem];
+	}
+}
+
+/* Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	@apply h-1.5 w-1.5;
+}
+
+*::-webkit-scrollbar-track {
+	@apply bg-transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	@apply rounded-lg bg-[rgba(0,0,0,0.2)];
+
+	&:hover {
+		@apply bg-[rgba(0,0,0,0.3)];
+	}
+}
